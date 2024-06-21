@@ -58,6 +58,14 @@ public class EchoServerFuncionsExercise4 {
         serverSocket.close();
     }
 
+    /**
+     * Calculates the mathematical function specified by `function` on the given `number`.
+     * Supports sine (sin), cosine (cos), and tangent (tan) functions.
+     * If the specified function is not recognized, defaults to cosine (cos).
+     * @param function The mathematical function to calculate ("sin", "cos", "tan").
+     * @param number The number on which the function will be applied.
+     * @return The result of applying the specified function to the number.
+     */
     public static double calculateFunction(String function, double number) {
         switch (function) {
             case "sin":
