@@ -3,9 +3,16 @@ package edu.escuelaing.arsw.ASE.app;
 import java.io.*;
 import java.net.*;
 
+/**
+ * A browser application that asks the user for a URL address, reads data from that address, and stores them in a file named resultado.html.
+ */
 public class Exercise2{
 
-
+    /**
+     * The main method that demonstrates the use of the URL class in Java.
+     * @param args Command line arguments (not used in this exercise).
+     * @throws Exception If any error occurs during URL processing.
+     */
     public static void main(String[] args) throws Exception {
         
         URL google = new URL("http://www.google.com/");

@@ -3,8 +3,19 @@ package edu.escuelaing.arsw.ASE.app;
 import java.io.*;
 import java.net.*;
 
+
+/**
+ * program in which you create a URL object and print on screen each of the data returned by the 8 methods: getProtocol, getAuthority, getHost, getPort, getPath, getQuery, getFile, getRef.
+ */
 public class Exercise1 
 {
+
+    /**
+     * The main method that demonstrates the use of the URL class in Java.
+     * It retrieves and prints various components of a URL.
+     * @param args Command line arguments (not used in this example).
+     * @throws Exception If any error occurs during URL processing.
+     */
     public static void main(String[] args) throws Exception {
         
         URL url = new URL("http://www.google.com/");

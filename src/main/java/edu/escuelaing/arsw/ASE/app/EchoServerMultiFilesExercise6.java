@@ -3,10 +3,18 @@ package edu.escuelaing.arsw.ASE.app;
 import java.io.*;
 import java.net.*;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 
+/**
+ * The EchoServerMultiFilesExercise6 class implements a simple multi-file web server that serves files based on HTTP GET requests.
+ */
 public class EchoServerMultiFilesExercise6 {
 
+    /**
+     * Main method that starts the multi-file web server on port 8080.
+     * Continuously accepts client connections and handles requests.
+     * @param args Command line arguments (not used in this example).
+     * @throws IOException If any I/O error occurs.
+     */
     public static void main(String[] args) throws IOException {
     
         ServerSocket serverSocket = new ServerSocket(8080);
@@ -21,6 +29,12 @@ public class EchoServerMultiFilesExercise6 {
         }
     }
 
+    /**
+     * Handles the client request by reading the HTTP request, determining the requested file,
+     * sending the appropriate HTTP response with the file content, or a 404 Not Found error.
+     * @param clientSocket The socket connected to the client.
+     * @throws IOException If any I/O error occurs.
+     */
     private static void handleClientRequest(Socket clientSocket) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
         PrintWriter out = new PrintWriter(clientSocket.getOutputStream());
@@ -63,6 +77,11 @@ public class EchoServerMultiFilesExercise6 {
         clientSocket.close();
     }
 
+    /**
+     * Determines the content type based on the file extension.
+     * @param filePath The path of the requested file.
+     * @return The content type string (e.g., "text/html", "image/jpeg").
+     */
     private static String getContentType(String filePath) {
         if (filePath.endsWith(".html") || filePath.endsWith(".htm")) {
             return "text/html";

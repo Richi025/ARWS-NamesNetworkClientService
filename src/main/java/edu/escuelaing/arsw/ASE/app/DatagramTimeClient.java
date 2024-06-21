@@ -9,8 +9,16 @@ import java.net.UnknownHostException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class DatagramTimeClient {
 
+/**
+ * The DatagramTimeClient class implements a simple UDP client that sends a datagram to a server (127.0.0.1 at port 4445) to retrieve the current time.
+ */
+public class DatagramTimeClient {
+    /**
+     * Main method that starts the Datagram Time Client.
+     * Sends a datagram to a server to retrieve the current time.
+     * @param args Command line arguments (not used in this example).
+     */
     public static void main(String[] args) {
         byte[] sendBuf = new byte[256];
         try {

@@ -8,10 +8,17 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * The DatagramTimeServerExercise7 class implements a simple UDP server that listens for datagrams from clients and sends the current time upon request.
+ */
 public class DatagramTimeServerExercise7 {
 
     DatagramSocket socket;
 
+    /**
+     * Constructor for DatagramTimeServerExercise7.
+     * Initializes the DatagramSocket on port 4445.
+     */
     public DatagramTimeServerExercise7() {
         try {
             socket = new DatagramSocket(4445);
@@ -20,6 +27,10 @@ public class DatagramTimeServerExercise7 {
         }
     }
 
+    /**
+     * Starts the UDP time server.
+     * Listens for incoming datagrams, sends the current time to the client upon request.
+     */
     public void startServer() {
         byte[] buf = new byte[256];
         try {
@@ -39,6 +50,10 @@ public class DatagramTimeServerExercise7 {
         socket.close();
     }
 
+    /**
+     * Main method that creates an instance of DatagramTimeServerExercise7 and starts the server.
+     * @param args Command line arguments (not used in this example).
+     */
     public static void main(String[] args) {
         DatagramTimeServerExercise7 ds = new DatagramTimeServerExercise7();
         ds.startServer();

@@ -4,7 +4,17 @@ import java.net.*;
 import java.io.*;
 import java.lang.Math;
 
+/**
+ * Is a server program that receives mathematical function and number requests from a client, calculates the result, and sends the response back to the client.
+ */
 public class EchoServerFuncionsExercise4 {
+
+    /**
+     * The main method that starts the server, accepts client connections,
+     * processes function requests and numbers, and sends the computed result back to the client.
+     * @param args Command line arguments (not used in this example).
+     * @throws IOException If any I/O error occurs.
+     */
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = null;
         try {

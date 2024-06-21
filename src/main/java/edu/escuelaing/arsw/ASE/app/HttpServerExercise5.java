@@ -1,10 +1,19 @@
 package edu.escuelaing.arsw.ASE.app;
 
-
 import java.net.*;
 import java.io.*;
 
+/**
+ * It is a simple HTTP server program that accepts connections from clients, reads the HTTP request, and sends a basic HTML response.
+ */
 public class HttpServerExercise5 {
+    
+    /**
+     * The main method that starts the HTTP server, accepts client connections,
+     * reads the HTTP request, and sends a basic HTML response.
+     * @param args Command line arguments (not used in this example).
+     * @throws IOException If any I/O error occurs.
+     */
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = null;
         try {

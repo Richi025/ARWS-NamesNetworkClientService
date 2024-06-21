@@ -3,7 +3,19 @@ package edu.escuelaing.arsw.ASE.app;
 import java.net.*;
 import java.io.*;
 
+
+/**
+ * A server that receives a number and responds with the square of this number.
+ */
 public class EchoServerSquareExercise3 {
+
+    /**
+     * The main method that starts the server, accepts client connections,
+     * reads numbers from the client, calculates their squares, and sends
+     * the results back to the client.
+     * @param args Command line arguments (not used in this example).
+     * @throws IOException If any I/O error occurs.
+     */
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = null;
         try {

@@ -1,5 +1,5 @@
 
-# TareaDiseñoOOGenerics
+# NamesNetworkClientService
 
 This project is a compilation of programs which do the following:
 
@@ -21,10 +21,10 @@ This project is a compilation of programs which do the following:
 8. ChatRMI: It's a program that can connect to another application of the same type on a remote server to start a chat. The application requests an IP address and a port before connecting to the desired client.
 
 
-For example, a typical invocation would be:
+For example, a typical invocation would be, PowerShell:
 
 ```
-'route the java.exe del jdk' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'class path in target folder' 'edu.escuelaing.arsw.ASE.app.EchoClient'
+'route the java.exe del jdk' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'class path in target folder' 'edu.escuelaing.arsw.ASE.app.<NameExercise>'
 
 Examples:
 
@@ -33,12 +33,6 @@ Examples:
 
 C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\ARSW\NamesNektop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.EchoServerFuncionsExercise4'
 ```
-
-### LOC/h Calculation
-
-To calculate LOC, 148 lines of code are taken into account, in 6 hours. So your productivity for this project is **24,6 LOC/h**.
-
-![img.png](Images%2Fimg.png)
 
 ## Starting
 
@@ -49,7 +43,7 @@ You can also clone the file using the following command.
 ```
 git clone https://github.com/Richi025/ARWS-NamesNetworkClientService.git
 ```
-if you want to run the application use the command.
+if you want to run the application use the command of PowerShell.
 
 ```
 'route the java.exe del jdk' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'class path in target folder' 'edu.escuelaing.arsw.ASE.app.EchoClient'
@@ -81,36 +75,34 @@ Download Java at https://www.java.com/es/download/ie_manual.jsp
 ```
 
 
-### Installing
+## Acceptance Tests
 
-Once you have the cloned project in your repository. Follow the steps below to launch the program successfully
-
-1. Open a terminal and enter the folder where I clone the repository.
-
-2. Use the following command to compile and clean the target directory.
-```
-mvn clean compile
-```
-3. Now use the following command to package the project as a JAR file.
-
-```
-mvn package
-```
-
-4. Now you can run the project using the following command.
-
-
-You can use the following files.
+Once you run each of the programs and use them correctly according to the following instructions, you will get the results shown in the following images.
 
 1. You can run the program by executing the file Exercise1.java. 
 
+```
+  & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.Exercise1'
+```
 ![alt text](images/image-1.png)
 
 2. You can run the program by executing the file Exercise2.java.
 
+```
+  & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.Exercise2'
+```
 ![alt text](images/image-2.png)
 
 3. You can run the program by first executing the server (EchoServerSquareExercise3) and then the client (EchoClient.java). Now you can enter a number from the client console and the server will respond with its square.
+
+```
+ & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.EchoServerSquareExercise3'
+```
+```
+  & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.EchoClient'
+5
+echo: 25
+```
 
 ![alt text](images/image-4.png)
 
@@ -118,13 +110,33 @@ You can use the following files.
 or fun
 , it will switch to these functions and return a response accordingly.
 
+```
+  c:; cd 'c:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClientService'; & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.EchoClient'
+5
+echo: Result: 0.28366218546322625
+fun: sin
+echo: Operation changed to: sin
+1
+echo: Result: 0.8414709848078965
+```
+
 ![alt text](images/image-3.png)
 
 5. You can run the program by executing the file HttpServerExercise5.java, then you can open a browser and use the link: "http://localhost:35000/"
 
+```
+  & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.HttpServerExercise5'
+Listo para recibir ...
+```
+
 ![alt text](images/image.png)
 
 6. You can run the program by executing the file EchoServerMultiFilesExercise6.java, then you can open a browser and use the link: or  or "http://localhost:8080/resultado.html"
+
+```
+ & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.EchoServerMultiFilesExercise6'
+Web server started on port 8080
+```
 
  "http://localhost:8080/ejemplo.html" 
 
@@ -140,52 +152,25 @@ http://localhost:8080/resultado.html
 
 7. You can run the program by first executing the server (DatagramTimeServerExercise7) and then the client (DatagramTimeClientExercise7.java). Now, in the client console, you will receive the server's response time every 5 seconds. If you restart the server, the console will show the updated time.
 
+```
+ & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.DatagramTimeServerExercise7'
+```
+
+```
+ & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.DatagramTimeClientExercise7'
+Date: Thu Jun 20 19:03:54 COT 2024
+No response received, maintaining last received time.
+Date: Thu Jun 20 19:03:54 COT 2024
+No response received, maintaining last received time.
+Date: Thu Jun 20 19:03:54 COT 2024
+Date: Thu Jun 20 19:04:19 COT 2024
+![alt text](images/imagex.png)
+```
+
 ![alt text](images/imagex.png)
 
-8.
+8. Pending
 
-
-
-
-
-
-## Running the tests
-
-To run the tests you can use the following Maven command
-
-```
-mvn test
-```
-![imgTest.png](Images%2FimgTest.png)
-
-## Design
-
-For the design, the following class diagram was made. In which it was considered to have a class for all the methods that are going to perform operations, the LinkedList class and the main class that uses these methods.
-
-
-
-
-### Phase architecture
-
-To be able to run the application using "*java -jar*" including in the "pom.xml" file and specifying the main class.
-
-```
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.1.0</version>
-        <configuration>
-          <archive>
-            <manifest>
-              <addClasspath>true</addClasspath>
-              <mainClass>edu.escuelaing.arsw.ASE.app.StatisticalCalculator</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
-    </plugins>
-```
 ## Built with
 
 * [Maven](https://maven.apache.org/) - Dependency management

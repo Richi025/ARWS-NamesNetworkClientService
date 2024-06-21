@@ -7,8 +7,17 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+/**
+ * Is a simple network client program that connects to a service
+ */
 public class EchoClient {
 
+    /**
+     * The main method that starts the client, connects to the server,
+     * sends user input to the server, and prints the server's response.
+     * @param args Command line arguments (not used in this example).
+     * @throws IOException If any I/O error occurs.
+     */
     public static void main(String[] args) throws IOException {
 
         Socket echoSocket = null;
