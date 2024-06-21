@@ -34,7 +34,7 @@ This project is a compilation of programs which do the following:
 
 8. **Exercise 6.4.1**
 
-      ChatRMI: It's a program that can connect to another application of the same type on a remote server to start a chat. The application requests an IP address and a port before connecting to the desired client.
+      MenssageRMI: It's a program that can connect to another application of the same type on a remote server to start a chat. The application requests an IP address and a port before connecting to the desired client.
 
 
 For example, a typical invocation would be, PowerShell:
@@ -201,7 +201,17 @@ Date: Thu Jun 20 19:04:19 COT 2024
 
 8. **Exercise 6.4.1**
 
-Pending
+You can run the program by first executing the server (src\main\java\edu\escuelaing\arsw\ASE\app\RIM\MessengerServiceImpl.java) and then the client (src\main\java\edu\escuelaing\arsw\ASE\app\RIM\MessengerClient.java). Now, in the client console, you will receive the server's response time every 5 seconds. If you restart the server, the console will show the updated time.
+```
+ & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.RIM.MessengerServiceImpl'
+```
+![alt text](images/imageRMIServer.png)
+
+```
+  & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\Aop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.RIM.MessengerClient'
+```
+
+![alt text](images/imageClient.png)
 
 ## Built with
 
@@ -218,7 +228,7 @@ We use [Git](https://github.com/) for version control. For available versions, s
 
 ## Date
 
-Wednesday, June 21, 2024
+Friday, June 21, 2024
 
 ## License
 
