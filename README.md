@@ -34,7 +34,7 @@ This project is a compilation of programs which do the following:
 
 8. **Exercise 6.4.1**
 
-      MenssageRMI: It's a program that can connect to another application of the same type on a remote server to start a chat. The application requests an IP address and a port before connecting to the desired client.
+      MenssagerRMI: It's a program that can connect to another application of the same type on a remote server to start a chat. The application requests an IP address and a port before connecting to the desired client.
 
 
 For example, a typical invocation would be, PowerShell:
@@ -201,17 +201,38 @@ Date: Thu Jun 20 19:04:19 COT 2024
 
 8. **Exercise 6.4.1**
 
-You can run the program by first executing the server (src\main\java\edu\escuelaing\arsw\ASE\app\RIM\MessengerServiceImpl.java) and then the client (src\main\java\edu\escuelaing\arsw\ASE\app\RIM\MessengerClient.java). Now, in the client console, you will receive the server's response time every 5 seconds. If you restart the server, the console will show the updated time.
+You can run the program by first executing the server (src\main\java\edu\escuelaing\arsw\ASE\app\RIM\MessengerServer.java) and then the two clients (src\main\java\edu\escuelaing\arsw\ASE\app\RIM\MessengerClient.java). Now, in the client console, messages sent by one client and messages received by client number two will be received. So:
+
 ```
- & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.RIM.MessengerServiceImpl'
+PS C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClientService>  & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetwop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.RIM.MessengerServer' 35000
+
+Message server is running on port 35000
 ```
 ![alt text](images/imageRMIServer.png)
 
 ```
-  & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\Aop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.RIM.MessengerClient'
+PS C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClientService>  & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.RIM.MessengerClient' 127.0.0.1 35000
+Enter your messages: 
+buenas tardes
+Message sent: buenas tardes
+hola
+Message sent: hola
+Message received: aqui estoy
+```
+![alt text](images/imageClientOne.png)
+
+```
+ & 'C:\Program Files\Java\jdk-21\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\juans\OneDrive\Desktop\ARSW\NamesNetworkClientService\target\classes' 'edu.escuelaing.arsw.ASE.app.RIM.MessengerClient' 127.0.0.1 35000
+Enter your messages: 
+Message received: buenas tardes
+Message received: hola
+aqui estoy
+Message sent: aqui estoy
 ```
 
 ![alt text](images/imageClient.png)
+
+
 
 ## Built with
 

@@ -1,36 +1,36 @@
 package edu.escuelaing.arsw.ASE.app.RIM;
 
-import java.io.Serializable;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
-public class Message implements Serializable {
-	
-	private String messageText;
-	
-	private String contentType;
-	
-	public Message() {
-	}
-	
-	public Message(String messageText, String contentType) {
-		
-		this.messageText = messageText;
-		this.contentType = contentType;
-	}
-	
-	public String getMessageText() {
-		return messageText;
-	}
+/**
+ * message interface for RMI-based message application.
+ * Defines methods for sending and receiving messages and registering clients.
+ */
+public interface Message extends Remote {
 
-	public void setMessageText(String messageText) {
-		this.messageText = messageText;
-	}
+    /**
+     * Sends a message to the messenger server.
+     * 
+     * @param message the message to be sent
+     * @param sender the client sending the message
+     * @throws RemoteException if a remote communication error occurs
+     */
+    void sendMessage(String message, Message sender) throws RemoteException;
 
-	public String getContentType() {
-		return contentType;
-	}
+     /**
+     * Registers a new client with the messenger server.
+     * 
+     * @param client the client to be registered
+     * @throws RemoteException if a remote communication error occurs
+     */
+    void registerClient(Message client) throws RemoteException;
 
-	public void setContentType(String contentType) {
-		this.contentType = contentType;
-	}
-	
+    /**
+     * Receives a message from the messenger server.
+     * 
+     * @param message the message received
+     * @throws RemoteException if a remote communication error occurs
+     */
+    void receiveMessage(String message) throws RemoteException;
 }
